@@ -1,7 +1,7 @@
 import Head from "next/head"
 
 import Header from "./header"
-import Nav from "./nav"
+import Menu from "./menu"
 
 export function Layout({children}){
     return(<>
@@ -11,7 +11,9 @@ export function Layout({children}){
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <Header />
-        <Nav />
-        {children}
+        <Menu />
+        <div className="content">
+            {children}
+        </div>
     </>)
 }
