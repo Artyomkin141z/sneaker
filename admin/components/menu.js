@@ -8,31 +8,14 @@ export default function Menu() {
         <div className={styles.container}>
             <h3>Главная</h3>
             <ul>
-                <li>Карточки товара</li>
-                <li><Link href='/product'>Товар</Link></li>
-                <li>Категории</li>
-                <li>Метки</li>
-            </ul>
-        </div>
-        <div className={styles.container}>
-            <h3>Компоненты</h3>
-            <ul>
-                <li>Просмотреть</li>
-                <li>Создать</li>
-                <li>Редактировать</li>
-            </ul>
-        </div>
-        <div className={styles.container}>
-            <h3>Склад</h3>
-            <ul>
-                <li>Товары</li>
-            </ul>
-        </div>
-        <div className={styles.container}>
-            <h3>Поставки</h3>
-            <ul>
-                <li>Новая поставка</li>
-                <li>История</li>
+                <li>Авторизация</li>
+                <li><Link href='/product'>Добавить товар</Link></li>
+                <li>Саздать категории</li>
+                <li>Создать метки</li>
+                <li>Создать бренд</li>
+                <li>Создать клиента</li>
+                <li>Создать заказ</li>
+                <li>Заказы</li>
             </ul>
         </div>
     </div>
