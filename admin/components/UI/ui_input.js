@@ -1,4 +1,4 @@
-import styles from '../../styles/ui_input.module.css';
+import styles from '../../styles/UI/ui_input.module.css';
 
 export default function UIInput({type, id, name, placeholder, value, onChange, label}){
     return(

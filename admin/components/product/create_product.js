@@ -4,46 +4,35 @@ import {useState} from 'react';
 
 import UIInput from '../UI/ui_input';
 import UITextarea from '../UI/ui_textarea';
+import UISelect from '../UI/ui_select';
 
 export default function CreateProduct(){
     const [productData, setProductData] = useState({
         name: '',               //Название
         description: '',        //Описание
         code: '',               //Код товара
-        details: {
-            gender: '',         //Пол
-            //color: '',        //Цвета
-            purpos: '',         //Предназначения
-            country: '',        //Страна производитель
-            materials: '',      //Материалы
-            idBrand: ''         //ID бренда
-        },
-        images: {
-            url: '',            //Адрес картинки
-            order: 0,           //Порядок картинки
-        },
-        types: {
-            color: '',          //Цвет
-            size: '',           //Размер
-            retailPrice: 0,     //Розничная цена
-            images: {
-                url: '',        //Адрес картинки
-                order: 0,       //Порядок картинки
-            },
-        },
     })
-
-    const handleInputChange = (event) => {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
-    
-        setProductData({
-          ...productData,
-          [name]: value
-        });
-        console.log(productData);
-    }
+    const [productDetails, setProductDetails] = useState({
+        gender: '',         //Пол
+        //color: '',        //Цвета
+        purpos: '',         //Предназначения
+        country: '',        //Страна производитель
+        materials: '',      //Материалы
+        idBrand: ''         //ID бренда
+    })
+    const [productImages, setProductImages] = useState({
+        url: '',            //Адрес картинки
+        order: 0,           //Порядок картинки
+    })
+    const [productTypes, setProductTypes] = useState({
+        olor: '',          //Цвет
+        size: '',           //Размер
+        retailPrice: 0,     //Розничная цена
+    })
+    const [prooductTypesImages, setProductTypesImages] = useState({
+        url: '',        //Адрес картинки
+        order: 0,       //Порядок картинки
+    })
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -54,14 +43,18 @@ export default function CreateProduct(){
     return(
         <div className={styles.container}> 
             <form onSubmit={handleSubmit}>
+                <h2>Основная информация</h2>
                 <UIInput 
                     type="text"
                     id="name"
                     name="name"
                     placeholder=" "
                     value={productData.name}
-                    onChange={handleInputChange}
-                    label="Название:"
+                    onChange={(event) => {setProductData({
+                        ...productData,
+                        name: event.target.value
+                    })}}
+                    label="Название"
                 />  
                 <UIInput
                     type="text"
@@ -69,38 +62,49 @@ export default function CreateProduct(){
                     name="code"
                     placeholder=" "
                     value={productData.code}
-                    onChange={handleInputChange}
-                    label="Код товара:"
+                    onChange={(event) => {setProductData({
+                        ...productData,
+                        name: event.target.value
+                    })}}
+                    label="Код товара"
                 />
                 <UITextarea 
                     id="description"
                     name="description"
+                    placeholder=" "
                     value={productData.description}
-                    onChange={handleInputChange}
-                    label="Описание:"
+                    onChange={(event) => {setProductData({
+                        ...productData,
+                        name: event.target.value
+                    })}}
+                    label="Описание"
                 />
-                <div className={styles.input__container}> 
-                    <select
-                        id="gender"
-                        name="gender"
-                        value={productData.details.gender}
-                        onChange={handleInputChange}
-                        required
-                    >
-                        <option value="">Выбрать пол</option>
-                        <option value="male">Мужской</option>
-                        <option value="female">Женский</option>
-                        <option value="child">Детское</option>
-                    </select>
-                    <label htmlFor="gender">Пол:</label>
-                </div>
+                <UISelect 
+                    label="Пол:"
+                    id="gender"
+                    name="gender"
+                    value={productDetails.gender}
+                    onChange={(event) => {setProductDetails({
+                        ...productDetails,
+                        gender: event.target.value
+                    })}}
+                    options={[
+                        {value:'', content:'Выбрать пол'},
+                        {value:'male', content:'Мужской'},
+                        {value:'female', content:'Женский'},
+                        {value:'child', content:'Детское'}
+                    ]}
+                />
                 <UIInput
                     type="text"
                     id="purpos"
                     name="purpos"
                     placeholder=" "
-                    value={productData.details.purpos}
-                    onChange={handleInputChange}
+                    value={productDetails.purpos}
+                    onChange={(event) => {setProductDetails({
+                        ...productDetails,
+                        gender: event.target.value
+                    })}}
                     label="Предназначение:"
                 />
                 <UIInput
@@ -108,11 +112,15 @@ export default function CreateProduct(){
                     id="materials"
                     name="materials"
                     placeholder=" "
-                    value={productData.details.materials}
-                    onChange={handleInputChange}
-                    label="Материалы:"
+                    value={productDetails.materials}
+                    onChange={(event) => {setProductDetails({
+                        ...productDetails,
+                        gender: event.target.value
+                    })}}
+                    label="Материалы"
                 />
-                <button type="submit">Создать</button>
+                <h2>Виды товара</h2>
+                <button type="submit" onClick={console.log(productData, productDetails)}>Создать</button>
             </form>
         </div>
     )
