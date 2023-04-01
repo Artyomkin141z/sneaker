@@ -1,6 +1,8 @@
-import styles from '../../styles/cmp_product_create_product.module.css';
+import styles from '../../styles/CMP/cmp_product_create_product.module.css';
 
 import {useState} from 'react';
+
+import CreateProductTypes from './create_product_types';
 
 import UIInput from '../UI/ui_input';
 import UITextarea from '../UI/ui_textarea';
@@ -20,19 +22,19 @@ export default function CreateProduct(){
         materials: '',      //Материалы
         idBrand: ''         //ID бренда
     })
-    const [productImages, setProductImages] = useState({
+    const [productImages, setProductImages] = useState([{
         url: '',            //Адрес картинки
         order: 0,           //Порядок картинки
-    })
-    const [productTypes, setProductTypes] = useState({
-        olor: '',          //Цвет
+    }])
+    const [productTypes, setProductTypes] = useState([{
+        color: '',          //Цвет
         size: '',           //Размер
         retailPrice: 0,     //Розничная цена
-    })
-    const [prooductTypesImages, setProductTypesImages] = useState({
+    }])
+    const [prooductTypesImages, setProductTypesImages] = useState([{
         url: '',        //Адрес картинки
         order: 0,       //Порядок картинки
-    })
+    }])
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -119,8 +121,16 @@ export default function CreateProduct(){
                     })}}
                     label="Материалы"
                 />
-                <h2>Виды товара</h2>
-                <button type="submit" onClick={console.log(productData, productDetails)}>Создать</button>
+                <CreateProductTypes 
+                    productTypes={productTypes}
+                    setProductTypes={setProductTypes}
+                />
+                <button type="submit" onClick={console.log({
+                    productData, 
+                    productDetails,
+                    productTypes
+                })}
+                >Создать</button>
             </form>
         </div>
     )
