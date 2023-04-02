@@ -3,6 +3,7 @@ import styles from '../../styles/CMP/cmp_product_create_product.module.css';
 import {useState} from 'react';
 
 import CreateProductTypes from './create_product_types';
+import ImageUploader from './image_uploader';
 
 import UIInput from '../UI/ui_input';
 import UITextarea from '../UI/ui_textarea';
@@ -58,6 +59,7 @@ export default function CreateProduct(){
                     })}}
                     label="Название"
                 />  
+                <ImageUploader />
                 <UIInput
                     type="text"
                     id="code"

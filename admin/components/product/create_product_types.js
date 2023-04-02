@@ -1,6 +1,8 @@
 import styles from '../../styles/CMP/cmp_product_create_product_types.module.css'
-
+import deleteImg from '../../public/image/delete.svg'
 import UIInput from "../UI/ui_input"
+
+import Image from 'next/image'
 
 export default function CreateProductTypes({productTypes, setProductTypes}){
     
@@ -42,8 +44,12 @@ export default function CreateProductTypes({productTypes, setProductTypes}){
                 }}
                 label="Цена"
             />
-            <button>Вставить картинку</button>
-            <button>Удалить</button>
+            <button type="button">Вставить картинку</button>
+            <button type="button" onClick={()=>{
+                productTypes.splice(index, 1)
+                setProductTypes([...productTypes])
+            }}
+            ><Image src={deleteImg} alt='Уведомление' width='25' height='25'/></button>
         </>)
     }
 
