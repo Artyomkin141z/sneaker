@@ -3,6 +3,7 @@ import styles from '../styles/menu.module.css'
 import Link from 'next/link'
 
 export default function Menu() {
+    //
     return (
     <div className={styles.menu}>
         <div className={styles.container}>
