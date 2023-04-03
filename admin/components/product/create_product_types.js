@@ -6,7 +6,7 @@ export default function CreateProductTypes({productTypes, setProductTypes}){
     
     function returnProductType(product, index){
         return(<>
-            <UIInput
+            <UIInput 
                 type="text"
                 id="color"
                 name="color"
@@ -15,9 +15,11 @@ export default function CreateProductTypes({productTypes, setProductTypes}){
                 onChange={(event) => {
                     productTypes[index].color = event.target.value
                     setProductTypes([...productTypes])
+                    //
                 }}
                 label="Цвет"
             />
+            
             <UIInput
                 type="number"
                 id="color"
