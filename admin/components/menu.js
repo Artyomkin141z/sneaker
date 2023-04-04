@@ -10,12 +10,11 @@ export default function Menu() {
             <h3>Главная</h3>
             <ul>
                 <li>Авторизация</li>
-                <li><Link href='/product'>Добавить товар</Link></li>
-                <li>Саздать категории</li>
-                <li>Создать метки</li>
-                <li>Создать бренд</li>
-                <li>Создать клиента</li>
-                <li>Создать заказ</li>
+                <li><Link href='/product'>Товары</Link></li>
+                <li><Link href='/categories'>Категории</Link ></li>
+                <li>Метки</li>
+                <li>Бренд</li>
+                <li>Клиента</li>
                 <li>Заказы</li>
             </ul>
         </div>
