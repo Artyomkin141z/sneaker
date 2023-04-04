@@ -10,3 +10,7 @@
     flex-direction: column;
     gap: 15px;
 }
+.input_container{
+    display: flex;
+    gap: 20px;
+}

@@ -3,7 +3,7 @@ import styles from '../../styles/CMP/cmp_product_create_product.module.css';
 import {useState} from 'react';
 
 import CreateProductTypes from './create_product_types';
-import ImageUploader from './image_uploader';
+import ImageUploader from '../general/image_uploader';
 
 import UIInput from '../UI/ui_input';
 import UITextarea from '../UI/ui_textarea';
@@ -47,19 +47,21 @@ export default function CreateProduct(){
         <div className={styles.container}> 
             <form onSubmit={handleSubmit}>
                 <h2>Основная информация</h2>
-                <UIInput 
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder=" "
-                    value={productData.name}
-                    onChange={(event) => {setProductData({
-                        ...productData,
-                        name: event.target.value
-                    })}}
-                    label="Название"
-                />  
-                <ImageUploader />
+                <div className={styles.input_container}>
+                    <UIInput 
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder=" "
+                        value={productData.name}
+                        onChange={(event) => {setProductData({
+                            ...productData,
+                            name: event.target.value
+                        })}}
+                        label="Название"
+                    />
+                    <ImageUploader />
+                </div>
                 <UIInput
                     type="text"
                     id="code"
