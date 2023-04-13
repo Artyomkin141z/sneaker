@@ -1,7 +1,7 @@
 import Head from "next/head"
 
-import Header from "./header"
-import Menu from "./menu"
+import Header from "./global/header"
+import Menu from "./global/menu"
 
 export function Layout({children}){
     return(<>
@@ -12,8 +12,8 @@ export function Layout({children}){
         </Head>
         <Header />
         <Menu />
-        <div className="content">
+        <main className="">
             {children}
-        </div>
+        </main>
     </>)
 }
