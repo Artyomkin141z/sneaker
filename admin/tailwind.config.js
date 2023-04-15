@@ -5,12 +5,20 @@ module.exports = {
     "./src/**/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        '500px': '500px',
+      },
+    },
     fontFamily: {
       'logo': 'Dongle, sans-serif',
       'text': 'Ubuntu, sans-serif'
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')({
+      strategy: 'base',
+    }),
+  ],
 }
 

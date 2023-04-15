@@ -11,11 +11,14 @@
   "dependencies": {
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "formik": "^2.2.9",
     "next": "13.3.0",
+    "next-auth": "^4.22.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.3.1"
