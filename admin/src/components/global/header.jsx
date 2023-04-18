@@ -12,10 +12,10 @@ export default function Header(){
                 <Image src={logo} alt='logo' width='40' height='40'/>
                 <div className='font-logo text-5xl text-gray-800'>Sneaker</div>
             </Link>
-            <div className='flex justify-between items-center gap-2'>
+            <Link href='/auth/signin' className='flex justify-between items-center gap-2'>
                 <Image src={notification} alt='Уведомление' width='25' height='25'/>
                 <Image className='rounded-full' src={profile} alt='Уведомление' width='40' height='40'/>
-            </div>
+            </Link>
         </div>
     )
 }

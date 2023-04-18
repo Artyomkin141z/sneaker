@@ -10,7 +10,7 @@ export function Layout({children}){
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Header />
+        
         <Menu />
         <main className="mt-16 ml-60">
             {children}
