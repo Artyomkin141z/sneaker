@@ -230,7 +230,7 @@ export default function Menu() {
 
             <nav aria-label="Teams Nav" className="mt-2 flex flex-col px-4">
               <Link
-                href="#"
+                href="/categories"
                 className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
               >
                 <svg
@@ -252,7 +252,7 @@ export default function Menu() {
               </Link>
 
               <Link
-                href="#"
+                href="/labels"
                 className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
               >
                 <svg
@@ -274,7 +274,7 @@ export default function Menu() {
               </Link>
 
               <Link
-                href="#"
+                href="/brands"
                 className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
               >
                 <svg
@@ -292,7 +292,7 @@ export default function Menu() {
                   />
                 </svg>
 
-                <span className="text-sm font-medium"> Товары </span>
+                <span className="text-sm font-medium"> Бренды </span>
               </Link>
             </nav>
           </details>

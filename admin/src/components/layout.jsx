@@ -12,7 +12,7 @@ export function Layout({children}){
         </Head>
         
         <Menu />
-        <main className="mt-16 ml-60">
+        <main className="ml-60 min-h-screen px-6 py-8">
             {children}
         </main>
     </>)
