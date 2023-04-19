@@ -1,19 +1,12 @@
+import FilterHead from "@/components/filters/filter_head_page";
+
+
 export default function BrandsIndexPage() {
   return (
     <div className="bg-white w-full h-full py-8 px-6 rounded-2xl max-w-4xl mx-auto">
-      <header className="flex justify-between border-b-2 border-gray-500 pb-3 mb-5">
-        <h2 className="text-2xl font-semibold">Бренды</h2>
-        <button className="flex gap-2 items-center">
-          <svg
-            height="30"
-            width="30"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="m12 0a12 12 0 1 0 12 12 12.013 12.013 0 0 0 -12-12zm0 22a10 10 0 1 1 10-10 10.011 10.011 0 0 1 -10 10zm5-10a1 1 0 0 1 -1 1h-3v3a1 1 0 0 1 -2 0v-3h-3a1 1 0 0 1 0-2h3v-3a1 1 0 0 1 2 0v3h3a1 1 0 0 1 1 1z" />
-          </svg>
-        </button>
-      </header>
+      <FilterHead 
+        headName = 'Бренды'
+      />
       <section className="flex flex-col">
         <div className="flex justify-between hover:bg-gray-100 px-2 py-3 rounded-xl transition">
           <div className="flex items-center gap-3">
