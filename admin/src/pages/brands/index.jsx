@@ -70,16 +70,16 @@ export default function BrandsIndexPage() {
         </div>
       </section>
       <footer>
-        <ol class="flex justify-center gap-1 text-xs font-medium mt-4">
+        <ol className="flex justify-center gap-1 text-xs font-medium mt-4">
           <li>
             <a
               href="#"
-              class="inline-flex h-8 w-8 items-center justify-center rounded border border-gray-100 rtl:rotate-180"
+              className="inline-flex h-8 w-8 items-center justify-center rounded border border-gray-100 rtl:rotate-180"
             >
-              <span class="sr-only">Prev Page</span>
+              <span className="sr-only">Prev Page</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-3 w-3"
+                className="h-3 w-3"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -95,20 +95,20 @@ export default function BrandsIndexPage() {
           <li>
             <a
               href="#"
-              class="block h-8 w-8 rounded border border-gray-100 text-center leading-8"
+              className="block h-8 w-8 rounded border border-gray-100 text-center leading-8"
             >
               1
             </a>
           </li>
 
-          <li class="block h-8 w-8 rounded border-blue-600 bg-blue-600 text-center leading-8 text-white">
+          <li className="block h-8 w-8 rounded border-blue-600 bg-blue-600 text-center leading-8 text-white">
             2
           </li>
 
           <li>
             <a
               href="#"
-              class="block h-8 w-8 rounded border border-gray-100 text-center leading-8"
+              className="block h-8 w-8 rounded border border-gray-100 text-center leading-8"
             >
               3
             </a>
@@ -117,7 +117,7 @@ export default function BrandsIndexPage() {
           <li>
             <a
               href="#"
-              class="block h-8 w-8 rounded border border-gray-100 text-center leading-8"
+              className="block h-8 w-8 rounded border border-gray-100 text-center leading-8"
             >
               4
             </a>
@@ -126,12 +126,12 @@ export default function BrandsIndexPage() {
           <li>
             <a
               href="#"
-              class="inline-flex h-8 w-8 items-center justify-center rounded border border-gray-100 rtl:rotate-180"
+              className="inline-flex h-8 w-8 items-center justify-center rounded border border-gray-100 rtl:rotate-180"
             >
-              <span class="sr-only">Next Page</span>
+              <span className="sr-only">Next Page</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-3 w-3"
+                className="h-3 w-3"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
