@@ -2,8 +2,7 @@ import { useFormik } from "formik";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 
-import { BiAt } from  "react-icons/bi";
-import { AiOutlineEye } from "react-icons/ai";
+import { BiAt, BiShow } from  "react-icons/bi";
 
 const validate = (values) => {
   const errors = {};
@@ -87,7 +86,7 @@ export default function AuthPage() {
               value={formik.values.password}
             />
             <span className="absolute inset-y-0 end-0 grid place-content-center px-4">
-              <AiOutlineEye />
+              <BiShow />
             </span>
           </div>
           {formik.errors.password ? <div>{formik.errors.password}</div> : null}

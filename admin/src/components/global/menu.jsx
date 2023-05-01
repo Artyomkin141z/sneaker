@@ -4,14 +4,16 @@ import Image from "next/image";
 import logo from "../../../public/images/ui/logo.png";
 import { useSession } from "next-auth/react";
 import { useEffect } from "react";
+import { Router, useRouter } from "next/router";
 
 import { BiCategory, BiShoppingBag, BiStoreAlt, BiGroup, BiGasPump, BiArchive, BiBusSchool, BiFilter, BiBandAid, BiCollection, BiFlag, BiChevronDown } from "react-icons/bi";
 
 export default function Menu() {
   const { status, data } = useSession();
+  const router = useRouter();
 
   useEffect(() => {
-    if (status === 'unauthenticated') Router.replace('auth/signin')
+    if (status === 'unauthenticated') router.replace('auth/signin')
     else console.log(data);
   }, [status])
 
